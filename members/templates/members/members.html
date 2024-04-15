@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Page</title>
+</head>
+<body>
+    <h1>Personnel</h1>
+    <ul>
+        {% for person in personnel %}
+            <li>{{ person.full_name }} - {{ person.rank }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Groups</h1>
+    <ul>
+        {% for group in groups %}
+            <li>{{ group.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Memberships</h1>
+    <ul>
+        {% for membership in memberships %}
+            <li>{{ membership.person.full_name }} - {{ membership.group.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
