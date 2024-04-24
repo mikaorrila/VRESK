@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-8">
         {% if project.image %}
-            <img src="{{ project.image.url }}" width="100%">
+        <div class="square-image" style="background-image: url('{{ project.image.url }}');"></div>
         {% endif %}
     </div>
     <div class="col-md-4">
@@ -18,4 +18,13 @@
         <p>{{ project.technology }}</p>
     </div>
 </div>
-{% endblock page_content %}
+<style>
+    .square-image {
+        width: 100%; /* Adjust width to your preference */
+        height: 15%;
+        padding-top: 75%; /* This creates a square aspect ratio */
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+{% endblock%}

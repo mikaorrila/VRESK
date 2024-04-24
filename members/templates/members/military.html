@@ -1,0 +1,13 @@
+<!-- projects/templates/members/members.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="container">
+    <h1>Memberships</h1>
+    <ul>
+        {% for membership in memberships %}
+            <li>{{ membership.person.nickname }} - {{ membership.group.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock page_content %}

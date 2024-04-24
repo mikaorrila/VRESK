@@ -1,0 +1,14 @@
+<!-- projects/templates/members/members.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="container">
+    <h1>Groups</h1>
+    <ul>
+        {% for group in groups %}
+            <li>{{ group.name }}, members ({{ group.member_count }})</li>
+        {% endfor %}
+        
+    </ul>
+{% endblock page_content %}

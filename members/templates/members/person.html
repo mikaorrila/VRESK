@@ -1,0 +1,13 @@
+<!-- projects/templates/members/members.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="container">
+    <h1>Person Info</h1>
+    <ul>
+        {% for person in personnel %}
+            <li>{{ person.full_name }} - {{ person.rank }}</li>
+        {% endfor %}
+    </ul>
+{% endblock page_content %}
